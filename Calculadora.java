@@ -3,7 +3,26 @@ package ar.edu.unlam.pb2;
 import java.util.Scanner;
 
 public class Calculadora {
-	
+		
+	 private static Scanner teclado;
+	 static Integer resultado2=0;
+
+	 public static Integer multiplicar(Integer a2, Integer b2) {
+		 return resultado2 = a2 * b2;
+	 }
+
+	 public static Integer sumar (Integer a2, Integer b2) {
+		 return resultado2=a2 + b2;
+	}
+	public static Integer restar (Integer a2, Integer b2) {
+		return resultado2 =a2 - b2;
+	 }
+
+	 public static Integer dividir(Integer a2, Integer b2) {
+		 return resultado2 = a2 / b2;
+	 }
+
+
 public static void main(String[] args) {
 		
 		Scanner teclado;
@@ -31,24 +50,24 @@ public static void main(String[] args) {
 		switch(opcion) {
 		
 		case 1: 
-			resultado = a * b;
+			multiplicar(a,b);
 			break;
 			
 		case 2: 
-			resultado = a - b;
+			restar(a,b);
 			break;
 			
 		case 3: 
-			resultado = a + b;
+			sumar(a,b);
 			break;
 			
 		case 4: 
-			resultado = a / b;
+			dividir(a,b);
 			break;
 		
 		}
 		
-		System.out.println("El resultado es " + resultado.toString());
+		System.out.println("El resultado es " + resultado2.toString());
 		}
 
 }
